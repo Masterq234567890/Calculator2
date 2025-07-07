@@ -111,4 +111,20 @@ body.dark .footer {
   background-color: #1e1e1e;
   color: #ccc;
   }
-  
+  .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
+  color: #444;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+    }
+
