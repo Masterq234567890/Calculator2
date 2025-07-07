@@ -66,3 +66,49 @@ button.zero {
   margin-bottom: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+/* Dark mode button styling */
+#darkToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark button,
+.dark input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Footer styling */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
+  color: #444;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+  }
+  
