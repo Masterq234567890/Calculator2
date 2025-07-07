@@ -25,15 +25,21 @@ body.dark {
 }
 
 /* 🔲 Calculator */
-.calculator {
+..calculator {
   width: 300px;
-  margin: 80px auto;
   padding: 20px;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
+
+  /* 🔽 New centering properties */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 body.dark .calculator {
   background-color: rgba(20, 20, 20, 0.85);
