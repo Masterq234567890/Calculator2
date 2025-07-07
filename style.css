@@ -1,4 +1,12 @@
 body {
+  background-image: url("Master.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
   background: #f2f2f2;
   display: flex;
