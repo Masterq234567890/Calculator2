@@ -7,44 +7,71 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- 🌗 Dark Mode Toggle Button -->
+  <button id="toggle-mode">Toggle Dark Mode</button>
+
+  <!-- 📱 Calculator Box -->
   <div class="calculator">
-    <input type="text" id="display" disabled />
+    <input type="text" id="display" readonly />
     <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendValue('/')">÷</button>
-      <button onclick="appendValue('*')">×</button>
-      <button onclick="deleteLast()">⌫</button>
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('/')">/</button>
 
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('-')">−</button>
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('*')">*</button>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('+')">+</button>
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('-')">-</button>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
       <button onclick="calculate()">=</button>
+      <button onclick="append('+')">+</button>
 
-      <button onclick="appendValue('0')" class="zero">0</button>
-      <button onclick="appendValue('.')">.</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="backspace()">⌫</button>
     </div>
   </div>
-  <script src="script.js"></script>
-  <div class="author-info">
-  <img src="Master.jpg" alt="Master" />
-  <p>Master</p>
+
+  <!-- 👤 Footer -->
+  <div class="footer">
+    Made by <strong>Master Q</strong>
   </div>
-  <footer class="footer">
-  © Master · 2025
-  </footer>
-  
+
+  <!-- 🧠 JavaScript -->
+  <script>
+    function append(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function calculate() {
+      try {
+        document.getElementById('display').value = eval(document.getElementById('display').value);
+      } catch {
+        document.getElementById('display').value = 'Error';
+      }
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function backspace() {
+      let val = document.getElementById('display').value;
+      document.getElementById('display').value = val.slice(0, -1);
+    }
+
+    // 🌗 Toggle Dark Mode
+    document.getElementById('toggle-mode').onclick = function () {
+      document.body.classList.toggle('dark');
+    };
+  </script>
 </body>
-  <button id="darkToggle">🌙 Dark Mode</button>
-  
-        </html>
-        
+</html>
