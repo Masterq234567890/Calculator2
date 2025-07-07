@@ -17,6 +17,24 @@ body {
   color: #000;
   transition: background-color 0.3s, color 0.3s;
 }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('Master.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+
+  /* ✅ Center calculator using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 60px; /* So footer doesn't overlap */
+}
 
 /* 🌙 Dark Mode */
 body.dark {
@@ -34,10 +52,7 @@ body.dark {
   transition: background-color 0.3s;
 
   /* 🔽 New centering properties */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
 }
 
 
